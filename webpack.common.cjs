@@ -20,22 +20,14 @@ module.exports = {
                 },
             },
             {
-              test: /\.css$/,
-              use: ['style-loader', 'css-loader'],
-            },
-            {
               test: /\.(png|svg|jpg|jpeg|gif)$/i,
               type: 'asset/resource',
-              generator: {
-                filename: 'pic/[name][ext]',
-              },
             },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
           template: './src/index.html',
-          filename: 'index.html',
         }),
         new ESLintPlugin({
             files: 'src/**/*.js',
