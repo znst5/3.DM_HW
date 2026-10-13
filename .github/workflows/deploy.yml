@@ -44,7 +44,9 @@ jobs:
         run: yarn build
 
       - name: Upload production-ready artifact
-        uses: actions/upload-pages-artifact@3
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
       - name: Deploy to Github Pages
         id: deployment
